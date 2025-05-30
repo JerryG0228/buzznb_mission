@@ -66,5 +66,6 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
     props: {
       city: params?.city as string,
     },
+    revalidate: 86400,
   };
 };
