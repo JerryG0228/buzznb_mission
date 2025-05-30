@@ -21,6 +21,13 @@ npm run dev
 yarn dev
 ```
 
+```bash
+# 테스트 실행
+npm test
+# 또는
+yarn test
+```
+
 <br/>
 
 ## 📁 폴더 구조
