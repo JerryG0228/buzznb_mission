@@ -12,8 +12,8 @@ npm install
 # 또는
 yarn install
 
-# 4. .env.local 파일 생성
-# 실행하실 때 편의상 비용이 들지 않아 API_KEY도 함께 올렸습니다.
+# 4.루트 디렉토리에 .env.local 파일 생성 및 API_KEY 설정
+# API_KEY는 이메일로 보내드렸습니다.
 
 # 5. 프로젝트 실행
 npm run dev
