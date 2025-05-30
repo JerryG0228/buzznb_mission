@@ -4,8 +4,8 @@ import Image from "next/image";
 import earth from "../public/earth.png";
 import styles from "../styles/page-css/city.module.css";
 import dynamic from "next/dynamic";
-import SmallSkeleton from "../components/smallSkeleton";
-import BigSkeleton from "../components/bigSkeleton";
+import SmallSkeleton from "../components/skeleton/smallSkeleton";
+import BigSkeleton from "../components/skeleton/bigSkeleton";
 
 type Props = {
   city: string;
@@ -18,11 +18,11 @@ type Params = {
 };
 
 // CityMainHeader와 CityMainSection을 동적 import
-const CityMainHeader = dynamic(() => import("../components/cityMainHeader"), {
+const CityMainHeader = dynamic(() => import("../components/cityMain/cityMainHeader"), {
   loading: () => <SmallSkeleton />,
 });
 
-const CityMainSection = dynamic(() => import("../components/cityMainSection"), {
+const CityMainSection = dynamic(() => import("../components/cityMain/cityMainSection"), {
   loading: () => <BigSkeleton />,
 });
 

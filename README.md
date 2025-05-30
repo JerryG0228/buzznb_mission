@@ -28,10 +28,15 @@ yarn dev
 ```bash
 weather-app/
 ├── components/           # 재사용 가능한 컴포넌트
-│   ├── cityMainHeader.tsx
-│   ├── cityMainSection.tsx
-│   ├── weatherAccordianBox.tsx
-│   └── weatherAccordianArticle.tsx
+│   ├── cityMain/
+│   ├── └── cityMainHeader.tsx
+│   ├── └── cityMainSection.tsx
+│   ├── skeleton/
+│   ├── └── bigSkeleton.tsx
+│   ├── └── smallSkeleton.tsx
+│   ├── weatherAccordian/
+│   ├── └── weatherAccordianBox.tsx
+│   ├── └── weatherAccordianArticle.tsx
 │
 ├── graphql/             # GraphQL 관련 파일
 │   ├── gqlApolloClient.ts
@@ -45,7 +50,7 @@ weather-app/
 │   ├── index.tsx
 │   ├── [city].tsx
 │   └── api/
-│       └── graphql.ts
+│       └── graphql.ts # GraphQL 서버
 │
 ├── public/             # 정적 파일
 │   └── earth.png

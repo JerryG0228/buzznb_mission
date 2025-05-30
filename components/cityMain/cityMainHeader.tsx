@@ -1,9 +1,9 @@
-import { formatDate } from "../utils/formatDate";
-import styles from "../styles/component-css/cityMainHeader.module.css";
+import { formatDate } from "../../utils/formatDate";
+import styles from "../../styles/component-css/cityMainHeader.module.css";
 import { useQuery } from "@apollo/client";
-import { GET_TODAY_WEATHER } from "../graphql/query/getWeather";
-import { TodayWeatherQuery } from "../types/city";
-import SmallSkeleton from "./smallSkeleton";
+import { GET_TODAY_WEATHER } from "../../graphql/query/getWeather";
+import { TodayWeatherQuery } from "../../types/city";
+import SmallSkeleton from "../skeleton/smallSkeleton";
 
 type Props = {
   city: string;

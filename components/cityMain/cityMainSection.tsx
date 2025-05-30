@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "../styles/component-css/cityMainSection.module.css";
+import styles from "../../styles/component-css/cityMainSection.module.css";
 import { useQuery } from "@apollo/client";
-import { GET_FIVE_DAYS_WEATHERS } from "../graphql/query/getWeather";
+import { GET_FIVE_DAYS_WEATHERS } from "../../graphql/query/getWeather";
 import dynamic from "next/dynamic";
-import BigSkeleton from "./bigSkeleton";
+import BigSkeleton from "../skeleton/bigSkeleton";
 
 // 동적 import - 코드 스플리팅
-const WeatherAccordianBox = dynamic(() => import("./weatherAccordianBox"), {
+const WeatherAccordianBox = dynamic(() => import("../weatherAccordian/weatherAccordianBox"), {
   loading: () => <BigSkeleton />,
 });
 

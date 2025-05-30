@@ -1,5 +1,5 @@
-import styles from "../styles/component-css/weatherAccordianArticle.module.css";
-import { formatOnlyTime } from "../utils/formatDate";
+import styles from "../../styles/component-css/weatherAccordianArticle.module.css";
+import { formatOnlyTime } from "../../utils/formatDate";
 
 type Props = {
   threeHoursWeather: {

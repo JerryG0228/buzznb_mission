@@ -1,7 +1,7 @@
-import styles from "../styles/component-css/weatherAccordianBox.module.css";
+import styles from "../../styles/component-css/weatherAccordianBox.module.css";
 import { useState } from "react";
 import WeatherAccordianArticle from "./weatherAccordianArticle";
-import { formatOnlyDate } from "../utils/formatDate";
+import { formatOnlyDate } from "../../utils/formatDate";
 import dynamic from "next/dynamic";
 
 // react-icons를 동적 import
