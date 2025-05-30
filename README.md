@@ -61,5 +61,6 @@ weather-app/
 │
 └── utils/              # 유틸리티 함수
 │   └── formatDate.ts
+│
 └── .env.local         # 환경 변수 설정 파일
 ```
