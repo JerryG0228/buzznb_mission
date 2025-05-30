@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../../styles/component-css/weatherAccordianArticle.module.css";
+import styles from "../../styles/component-css/weatherAccordionArticle.module.css";
 import { formatOnlyTime } from "../../utils/formatDate";
 
 type Props = {

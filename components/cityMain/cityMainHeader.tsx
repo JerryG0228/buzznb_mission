@@ -7,7 +7,7 @@ import SmallSkeleton from "../skeleton/smallSkeleton";
 import Image from "next/image";
 
 type Props = {
-  city: string;
+  city: "Seoul" | "Tokyo" | "Paris" | "London";
 };
 
 export default function CityMainHeader({ city }: Props) {
@@ -21,12 +21,14 @@ export default function CityMainHeader({ city }: Props) {
 
   const {
     weather: [{ icon, description }],
-    dt: utcTime,
+    dt: timeStamp,
     main: { temp, feels_like, humidity },
     wind: { speed },
   } = data.getWeather.list[0]; // 오늘 날씨 정보
 
   const { name, country, population } = data.getWeather.city; // 도시 정보
+
+  const datetime = formatDate(timeStamp);
 
   return (
     <div>
@@ -41,7 +43,7 @@ export default function CityMainHeader({ city }: Props) {
           />
 
           <div className={styles.locBox}>
-            <time className={styles.date}>{formatDate(utcTime)}</time>
+            <time className={styles.date}>{datetime}</time>
             <div className={styles.cityInfo}>
               <div className={styles.cityName}>
                 {name},{country}

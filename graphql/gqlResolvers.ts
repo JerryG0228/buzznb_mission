@@ -6,7 +6,7 @@ export const gqlResolvers = {
       const apiKey = process.env.API_KEY;
       try {
         const weatherData: WeatherData = await fetch(
-          `http://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&q=${city}&appid=${apiKey}`
+          `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
         ).then((res) => res.json());
 
         return weatherData;

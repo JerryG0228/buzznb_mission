@@ -1,6 +1,6 @@
-import styles from "../../styles/component-css/weatherAccordianBox.module.css";
+import styles from "../../styles/component-css/weatherAccordionBox.module.css";
 import { useState } from "react";
-import WeatherAccordianArticle from "./weatherAccordianArticle";
+import WeatherAccordianArticle from "./weatherAccordionArticle";
 import { formatOnlyDate } from "../../utils/formatDate";
 import dynamic from "next/dynamic";
 
@@ -10,19 +10,17 @@ const DynamicIoIosArrowDown = dynamic(() =>
 );
 
 type Props = {
-  oneDayWeather: [
-    {
-      dt: number;
-      main: {
-        temp_min: number;
-        temp_max: number;
-      };
-      weather: Array<{
-        description: string;
-        icon: string;
-      }>;
-    }
-  ];
+  oneDayWeather: {
+    dt: number;
+    main: {
+      temp_min: number;
+      temp_max: number;
+    };
+    weather: Array<{
+      description: string;
+      icon: string;
+    }>;
+  }[];
 };
 
 export default function WeatherAccordianBox({ oneDayWeather }: Props) {
@@ -46,7 +44,10 @@ export default function WeatherAccordianBox({ oneDayWeather }: Props) {
         </button>
       </header>
 
-      <div className={`${styles.main} ${toggle ? styles.open : ""}`}>
+      <div
+        className={`${styles.main} ${toggle ? styles.open : ""}`}
+        data-testid="accordion-content"
+      >
         {oneDayWeather.map((threeHoursWeather) => (
           <WeatherAccordianArticle
             threeHoursWeather={threeHoursWeather}

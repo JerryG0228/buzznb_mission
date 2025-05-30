@@ -27,6 +27,16 @@ yarn dev
 
 ```bash
 weather-app/
+├── __test__/           # 테스트 코드
+│   ├── components/
+│   ├── └── cityMainHeader.test.tsx
+│   ├── └── weatherAccordionBox.test.tsx
+│   ├── graphql/
+│   ├── └── getWeather.test.tsx
+│   ├── └── smallSkeleton.tsx
+│   └── utis/
+│       └── formatDate.test.tsx
+│
 ├── components/           # 재사용 가능한 컴포넌트
 │   ├── cityMain/
 │   ├── └── cityMainHeader.tsx
@@ -34,9 +44,9 @@ weather-app/
 │   ├── skeleton/
 │   ├── └── bigSkeleton.tsx
 │   ├── └── smallSkeleton.tsx
-│   ├── weatherAccordian/
-│   ├── └── weatherAccordianBox.tsx
-│   ├── └── weatherAccordianArticle.tsx
+│   └── weatherAccordian/
+│       └── weatherAccordianBox.tsx
+│       └── weatherAccordianArticle.tsx
 │
 ├── graphql/             # GraphQL 관련 파일
 │   ├── gqlApolloClient.ts

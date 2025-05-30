@@ -6,12 +6,12 @@ import dynamic from "next/dynamic";
 import BigSkeleton from "../skeleton/bigSkeleton";
 
 // 동적 import - 코드 스플리팅
-const WeatherAccordianBox = dynamic(() => import("../weatherAccordian/weatherAccordianBox"), {
+const WeatherAccordianBox = dynamic(() => import("../weatherAccordion/weatherAccordionBox"), {
   loading: () => <BigSkeleton />,
 });
 
 type Props = {
-  city: string;
+  city: "Seoul" | "Tokyo" | "Paris" | "London";
 };
 
 export default function CityMainSection({ city }: Props) {

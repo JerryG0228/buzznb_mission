@@ -8,7 +8,7 @@ import SmallSkeleton from "../components/skeleton/smallSkeleton";
 import BigSkeleton from "../components/skeleton/bigSkeleton";
 
 type Props = {
-  city: string;
+  city: "Seoul" | "Tokyo" | "Paris" | "London";
 };
 
 type Params = {
@@ -64,7 +64,7 @@ export async function getStaticPaths() {
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   return {
     props: {
-      city: params?.city as string,
+      city: params?.city as "Seoul" | "Tokyo" | "Paris" | "London",
     },
     revalidate: 86400,
   };
