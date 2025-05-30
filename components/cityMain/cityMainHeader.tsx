@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/client";
 import { GET_TODAY_WEATHER } from "../../graphql/query/getWeather";
 import { TodayWeatherQuery } from "../../types/city";
 import SmallSkeleton from "../skeleton/smallSkeleton";
+import Image from "next/image";
 
 type Props = {
   city: string;
@@ -32,7 +33,12 @@ export default function CityMainHeader({ city }: Props) {
       <header className={styles.mainHeader}>
         {/* 오늘 날씨 - 왼쪽 파트 */}
         <div className={styles.todayLeftArticle}>
-          <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} width={120} height={120} />
+          <Image
+            src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+            width={120}
+            height={120}
+            alt="weather-icon"
+          />
 
           <div className={styles.locBox}>
             <time className={styles.date}>{formatDate(utcTime)}</time>
