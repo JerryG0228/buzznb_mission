@@ -5,7 +5,7 @@
 git clone https://github.com/JerryG0228/buzznb_mission.git
 
 # 2. 프로젝트 폴더로 이동
-cd weather-app
+cd buzznb_mission
 
 # 3. 패키지 설치
 npm install
